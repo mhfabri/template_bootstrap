@@ -32,3 +32,36 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+new Typed("#typing", {
+  strings: ["Matheus", "Fabri", " Web Developer", "Matheus Fabri"],
+  typeSpeed: 60,
+  backSpeed: 40,
+  loop: false
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // anima só uma vez
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  revealElements.forEach(el => observer.observe(el));
+
+  
+  
+});

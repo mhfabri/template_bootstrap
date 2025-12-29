@@ -104,6 +104,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -120,6 +122,33 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
   color: #343a40;
 }
+
+.escrevendo{
+  display: inline-block;
+}
+
+.typed-cursor {
+  display: inline-block;
+  font-size: 4.5rem;
+  line-height: 1.2;
+  vertical-align: middle;
+  transform: translateY(-0.5em);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 
 h1, .h1 {
   font-size: calc(1.725rem + 5.7vw);
@@ -3628,6 +3657,7 @@ textarea.form-control-lg {
   color: var(--bs-nav-link-color);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  text-align: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -8128,7 +8158,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: black !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
 }
 
 .bg-secondary {
@@ -10902,6 +10932,7 @@ p.lead {
     max-width: 10rem;
     max-height: 10rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    rotate: -90deg;
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -10938,6 +10969,9 @@ p.lead {
 }
 .social-icons .social-icon:hover {
   background-color: black;
+  border: 1px solid #fff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
 }
 
 .dev-icons {
